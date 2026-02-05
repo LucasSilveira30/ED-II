@@ -1,0 +1,35 @@
+##DESCRIÇÃO:
+Este projeto implementa um sistema completo de gerenciamento e compressão de imagens binárias. 
+O sistema processa imagens no formato PGM, aplica técnicas de binarização por limiarização e comprime os dados utilizando o algoritmo Run-Length Encoding (RLE).
+
+##OBJETIVOS PRINCIPAIS:
+- Compressão Eficiente: Implementar compressão RLE para imagens binárias;
+- Gerenciamento de Banco de Dados: Criar sistema com arquivo de índices para acesso rápido;
+- Operações CRUD: Permitir adição, listagem, remoção e recuperação de imagens;
+- Compactação de Espaço: Implementar compactação física do banco de dados;
+- Reconstrução de Imagens: Funcionalidade bônus para reconstruir imagem original. 
+
+##FUNCIONALIDADES IMPLEMENTADAS:
+- Compressão RLE: Seguindo exatamente o formato especificado no PDF;
+- Arquivo de Índices: Para localização rápida dos registros;
+- Remoção Lógica: Marcação de registros como removidos;
+- Compactação Física: Liberação de espaço com complexidade O(n);
+- Recuperação PGM: Exportação de imagens para formato legível;
+- Reconstrução de Imagem Original (BONUS): Calcula média de múltiplas versões binarizadas.
+
+##ESTRUTURA DE ARQUIVOS:
+    projeto1/
+    ├── main.c                 # Menu principal e interface
+    ├── image_manager.h        # Headers e estruturas
+    ├── image_processing.c     # Leitura/escrita PGM + compressão
+    ├── database.c            # Gerenciamento do banco
+    ├── reconstruction.c      # Reconstrução (bônus)
+    └── utils.c              # Funções auxiliares
+
+##COMO COMPILAR?
+Realize o comando:
+    gcc -Wall -Wextra -std=c99 -g -o image_manager main.c image_processing.c database.c reconstruction.c utils.c
+
+##COMO EXECUTAR?
+Realize o comando:
+    ./image_manager
