@@ -1,0 +1,42 @@
+##DESCRIÇÃO:
+Sistema comnpleto de gerenciamento e compressão de imagens binárias 
+utilizando Árvore-B de ordem 3 para indexação eficiente.
+
+##OBJETIVOS PRINCIPAIS:
+- Implementar Árvore-B páginada de ordem 3 para índices;
+- Permitir inserção de múltiplas versões com diferentes limiares;
+- Desenvolver sistema de compressão RLE para imagens binárias;
+- Otimizar operações de busca, inserção e remoção;
+- Fornecer visualização da estrutura interna da Árvore-B.
+
+##FUNCIONALIDADES IMPLEMENTADAS:
+- Árvore-B completa com inserção, remoção e busca;
+- Processamento de imagens PGM com limiarização;
+- Compressão e descompressão RLE de imagens binárias;
+- Inserção em lote com múltiplos limiares;
+- Compactação do arquivo de dados;
+- Impressão do conteúdo das páginas da Árvore-B;
+- Percurso ordenado das chaves;
+- Virtualização da raiz em memória RAM.
+
+##ESTRUTURA DE ARQUIVOS:
+    projeto2/
+    ├── main.c                 # Interface principal e menu do sistema
+    ├── btree.h                # Definições e cabeçalhos da Árvore-BDefinições e cabeçalhos da Árvore-B
+    ├── btree.c                # Implementação completa da Árvore-B
+    ├── image.h                # Definições para processamento de imagens
+    └── image.c                # Implementação do processamento e compressão
+
+##COMO COMPILAR?
+Efetue o comando:
+- PARA WINDOWS:
+    gcc -mconsole -o image_system.exe main.c btree.c image.c
+- PARA LINUX/MAC:
+    gcc -o image_system main.c btree.c image.c
+
+##COMO EXECUTAR?
+Efetue o comando:
+- PARA WINDOWS:
+    image_system.exe
+- PARA LINUX/MAC:
+    ./image_system
